@@ -14,4 +14,6 @@ public interface ArticleDao {
 
 	public void add(Map<String, Object> param);
 
+	public Article getOne(long id);
+
 }

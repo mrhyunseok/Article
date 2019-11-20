@@ -13,4 +13,9 @@
 		body = #{body}
 
 	</insert>
+	<select id="getOne" parameterType="long" resultType="Article">
+		SELECT *
+		FROM
+		article WHERE id = #{id}
+	</select>
 </mapper>

@@ -11,4 +11,6 @@ public interface ArticleService {
 
 	public long add(Map<String, Object> param);
 
+	public Article getOne(long id);
+
 }

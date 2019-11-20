@@ -27,4 +27,9 @@ public class ArticleServiceImpl implements ArticleService {
 		return CUtil.getAsLong(param.get("id"));
 	}
 
+	@Override
+	public Article getOne(long id) {
+		return articleDao.getOne(id);
+	}
+
 }
