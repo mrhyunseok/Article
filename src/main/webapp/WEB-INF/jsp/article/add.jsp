@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>게시물 추가</h1>
-	<form action="./doAdd">
+	<form action="./doAdd" method="post">
+	
 		<div>
 			<span>제목</span> <input type="text" placeholder="제목" name="title">
 		</div>
