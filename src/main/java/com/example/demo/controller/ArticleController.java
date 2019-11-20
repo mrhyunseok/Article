@@ -48,5 +48,18 @@ public class ArticleController {
 		model.addAttribute("article", article);
 		return "article/detail";
 	}
+	@RequestMapping("article/doDelete")
+	@ResponseBody
+	public String doDelete(long id) {
+		StringBuilder sb = new StringBuilder();
+		articleService.doDelete(id);
+		String msg = id + "번째 게시글이 삭제되었습니다.";
+		sb.append("alert('" + msg + "');");
+		sb.append("location.replace('./list');");
+		sb.insert(0, "<script>");
+		sb.append("</script>");
+		return sb.toString();
+
+	}
 	
 }

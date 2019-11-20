@@ -23,7 +23,7 @@
 				<td>${article.id }</td>
 				<td>${article.title }</td>
 				<td>${article.body }</td>
-				<td>${article.id }</td>
+				<td><a href="./doDelete?id=${article.id }">삭제</a></td>
 			</tr>
 		</tbody>
 	</table>

@@ -13,4 +13,6 @@ public interface ArticleService {
 
 	public Article getOne(long id);
 
+	public void doDelete(long id);
+
 }

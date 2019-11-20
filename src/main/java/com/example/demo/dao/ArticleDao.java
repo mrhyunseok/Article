@@ -16,4 +16,6 @@ public interface ArticleDao {
 
 	public Article getOne(long id);
 
+	public void doDelete(long id);
+
 }
