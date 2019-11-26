@@ -3,7 +3,26 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageName" value="게시물 추가" />
 <%@ include file="../part/head.jspf"%>
-<form action="./doAdd" method="post">
+<script>
+	function addFormsubmit(form) {
+		form.title.value = form.title.value.trim();
+		if (form.title.value.length == 0) {
+			alert('제목을 입력해주세요');
+			form.title.focus();
+			return false;
+
+		}
+		form.body.value = form.body.value.trim();
+		if (form.body.value.length == 0) {
+			alert('내용을 입력해주세요');
+			form.body.focus();
+			return false;
+		}
+		form.submit();
+	}
+</script>
+<form action="./doAdd" method="post"
+	onsubmit="addFormsubmit(this); return false;">
 
 	<div>
 		<span>제목</span> <input type="text" placeholder="제목" name="title">
