@@ -15,4 +15,6 @@ public interface ArticleService {
 
 	public void doDelete(long id);
 
+	public void doModify(Map<String, Object> param);
+
 }
