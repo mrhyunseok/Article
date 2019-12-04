@@ -20,4 +20,6 @@ public interface ArticleDao {
 
 	public void doModify(Map<String, Object> param);
 
+	public void hitup(long id);
+
 }

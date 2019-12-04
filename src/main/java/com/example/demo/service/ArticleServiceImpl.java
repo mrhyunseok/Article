@@ -44,4 +44,10 @@ public class ArticleServiceImpl implements ArticleService {
 		
 	}
 
+	@Override
+	public void hitup(long id) {
+		articleDao.hitup(id);
+		
+	}
+
 }

@@ -9,6 +9,7 @@
 			<th>id</th>
 			<th>제목</th>
 			<th>내용</th>
+			<th>조회수</th>
 			<th>비고</th>
 		</tr>
 	</thead>
@@ -19,6 +20,7 @@
 				<td>${article.id }</td>
 				<td><a href="./detail?id=${article.id }">${article.title }</a></td>
 				<td>${article.body }</td>
+				<td>${article.hit }</td>
 				<td><a onclick="if(confirm('삭제하시겠습니까?') == false) return false;" href="./doDelete?id=${article.id }" >삭제</a></td>
 			</tr>
 		</c:forEach>

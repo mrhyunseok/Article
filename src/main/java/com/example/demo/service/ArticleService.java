@@ -17,4 +17,6 @@ public interface ArticleService {
 
 	public void doModify(Map<String, Object> param);
 
+	public void hitup(long id);
+
 }
