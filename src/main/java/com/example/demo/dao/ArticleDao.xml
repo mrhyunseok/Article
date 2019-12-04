@@ -10,7 +10,8 @@
 		keyProperty="id">
 		INSERT INTO article SET regDate = NOW(),
 		title = #{title},
-		body = #{body}
+		body = #{body},
+		hit = 0
 
 	</insert>
 	<select id="getOne" parameterType="long" resultType="Article">
