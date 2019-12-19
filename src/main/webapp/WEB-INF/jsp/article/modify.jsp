@@ -3,24 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageName" value="게시물 수정" />
 <%@ include file="../part/head.jspf"%>
-<script>
-	function modifyFormsubmit(form) {
-		form.title.value = form.title.value.trim();
-		if (form.title.value.length == 0) {
-			alert('제목은 공백일수 없습니다.');
-			form.title.focus();
-			return false;
 
-		}
-		form.body.value = form.body.value.trim();
-		if (form.body.value.length == 0) {
-			alert('내용은 공백일수없습니다.');
-			form.body.focus();
-			return false;
-		}
-		form.submit();
-	}
-</script>
 <form action="./doModify" method="POST"
 	onsubmit="modifyFormsubmit(this);return false;">
 
